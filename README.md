@@ -33,22 +33,22 @@ sudo chmod u+s power_test
 ./power_test
 ```
 
-## Including the Power Measurement Module in Other Projects
-To include the Power Measurement Module in another C++ project, follow these steps:
+## Including the Power Measurement Library in Other Projects
+To include the Power Measurement Library in another C++ project, follow these steps:
 
 - Copy the power_library folder to your project directory.
 - Add the following lines to your project's CMakeLists.txt file:
 
 ```
 add_subdirectory(power_library)
-target_link_libraries(<your_target_name> power_measurement_module)
+target_link_libraries(<your_target_name> power_lib)
 ```
 - Include the power_measurement.h file in your source code:
 
 ```cpp
 #include "power_library/power_measurement.h"
 ```
-- Use the power_measurement_module::measure_power_consumption function to measure the power consumption of your functions:
+- Use the power_library::measure_power_consumption function to measure the power consumption of your functions:
 ```cpp
 power_measurement_module::measure_power_consumption(<your_function_name>);
 ```
